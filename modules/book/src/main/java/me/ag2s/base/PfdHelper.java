@@ -34,6 +34,7 @@ public final class PfdHelper {
             return android.system.Os.lseek(pfd.getFileDescriptor(), 0, OsConstants.SEEK_CUR);
         } catch (ErrnoException e) {
             throw rethrowAsIOException(e);
+            
         }
     }
 
