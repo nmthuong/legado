@@ -177,6 +177,7 @@ class MainActivity : VMBaseActivity<ActivityMainBinding, MainViewModel>(),
                     bookshelfReselected = System.currentTimeMillis()
                 } else {
                     (fragmentMap[getFragmentId(0)] as? BaseBookshelfFragment)?.gotoTop()
+                    
                 }
             }
 
@@ -205,6 +206,7 @@ class MainActivity : VMBaseActivity<ActivityMainBinding, MainViewModel>(),
             val height = windowInsets.navigationBarHeight
             bottomNavigationView.bottomPadding = height
             windowInsets.inset(0, 0, 0, height)
+            return@setOnApplyWindowInsetsListener windowInsets
         }
     }
 
